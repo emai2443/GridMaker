@@ -37,10 +37,7 @@ function removeC() {
         }
     }
 }
-// function onClick(event){
-//     // event.target.style.backgroundColor = colorSelected;
-//     console.log(event.target);
-// }
+
 
 // Set global variable for selected color
 function selectColor(){
@@ -52,7 +49,6 @@ function selectColor(){
         console.log(event.target);
         event.target.style.backgroundColor = colorSelected;
     });
-    // grid.addEventListener("click", changeColor(grid));
 }
 
 // Fill all uncolored cells
@@ -62,7 +58,7 @@ function fillU(){
     {
         if(!grid[i].style.backgroundColor){
             grid[i].style.backgroundColor = colorSelected;
-            // i++;
+
         }
     }
 }
