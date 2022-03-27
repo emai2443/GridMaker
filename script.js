@@ -5,10 +5,10 @@ let colorSelected;
 
 // Add a row
 function addR() {
-  var numRows = grid.rows.length;
+  let table = document.querySelector("#grid");
+  numRows = table.rows.length;
 
   if (numRows === 0) {
-    //if table is empty, add first cell
     let row = grid.insertRow();
     row.insertCell();
   } else {
@@ -21,9 +21,15 @@ function addR() {
 }
 function addC() {
   let table = document.querySelector("#grid");
-  let row = table.getElementsByTagName("tr");
-  for (i = 0; i < row.length; i++) {
-    row[i].innerHTML = row[i].innerHTML + "<td></td>";
+  numRows = table.rows.length;
+  if (numRows === 0) {
+    let row = grid.insertRow();
+    row.insertCell();
+  } else {
+    let row = table.getElementsByTagName("tr");
+    for (i = 0; i < row.length; i++) {
+      row[i].innerHTML = row[i].innerHTML + "<td></td>";
+    }
   }
 }
 
